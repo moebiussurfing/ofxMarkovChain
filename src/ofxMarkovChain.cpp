@@ -14,7 +14,7 @@ void ofxMC::MarkovChain::update(){
 		new_state = 0;
 	}
 	else{
-		for(uint i = 0; i < row.size()-1; ++i){
+		for(int i = 0; i < row.size()-1; ++i){
 			sum += row[i];
 			if(f > sum && f < sum+row[i+1]){
 				new_state = i+1;

@@ -16,7 +16,7 @@ namespace ofxMC {
 			void log();
 			vector<float>& operator[](int i);
 
-			uint size(){ return mat.size(); }	
+			int size(){ return mat.size(); }	
 	};
 
 }
