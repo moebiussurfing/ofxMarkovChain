@@ -89,7 +89,22 @@ bool ofxMC::Matrix::check(){
 
 void ofxMC::Matrix::log(){
 	stringstream ss;
-	ss << "Transition matrix:\n";
+		
+	ss << "Transition matrix:\n\n";
+
+	//states labels
+	ss << "  States | \t";
+	for (int j = 0; j < mat[0].size(); ++j) {
+		ss << j << " \t";
+	}
+	ss << "\n";
+	//underlines
+	ss << " ";
+	for (int j = 0; j < 16; ++j) {
+		ss << "-----";
+	}
+	ss << "----\n";
+
 	for(int i = 0; i < mat.size(); ++i){
 		for(int j = 0; j < mat[i].size(); ++j){
 			ss << mat[i][j] << "\t";
